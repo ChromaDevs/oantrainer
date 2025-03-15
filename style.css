@@ -4,7 +4,6 @@
 }
 body {
     background-color: rgb(24, 30, 48);
-    display: flex;
     height: 100vh;
     overflow: hidden;
     margin: 0;
@@ -13,7 +12,6 @@ body {
 #buttons {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    flex-grow: 1;
 }
 button {
     color: slategrey;
