@@ -57,11 +57,14 @@ setInterval(function(){
             lastState = state
             buttonDiv.innerHTML = `
             ${win == "yes" ? `<h2>${congrats[Math.round(Math.random()*(congrats.length - 1))]}</h2>` : `<h2>${wrong[Math.round(Math.random()*(wrong.length - 1))]}</h2>`}
-            <button onclick="state = 'answering'">Next</button> <button onclick="state = 'finished'">Finish</button>
+            <button onclick="state = 'answering'">Next</button>
+            <button onclick="state = 'finished'">Finish</button>
             `
             pointsElem.innerHTML = `${points} point${points == 1 ? "" : "s"}`
         } else {
-            document.body.innerHTML = `<h1>You got <code>${points}</code> point${points == 1 ? "" : "s"}!</h1>`
+            document.body.innerHTML = `
+            <h1>You got <code>${points}</code> point${points == 1 ? "" : "s"}!</h1>
+            <button onclick="location.reload()">Restart</button>`
         }
     }
     
