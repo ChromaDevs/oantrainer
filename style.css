@@ -9,6 +9,9 @@ body {
     margin: 0;
     padding: 0;
 }
+#others{
+    height: 20%;
+}
 #buttons {
     display: grid;
     grid-template-rows: 1fr 1fr;

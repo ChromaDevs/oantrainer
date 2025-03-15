@@ -48,7 +48,7 @@ setInterval(function(){
             lastState = state
             let book = books[Math.round(Math.random()*(books.length - 1))]
             bookElem.innerText = book
-            pointsElem.innerHTML = `${points} points`
+            pointsElem.innerHTML = `${points} point${points == 1 ? "" : "s"}`
             buttonDiv.innerHTML = `
             <button onclick="if (check('${book}') == 'old') { points++; win = 'yes' } else { win = 'no' } state = 'answered'">Old Testament</button>            
             <button onclick="if (check('${book}') == 'new') { points++; win = 'yes' } else { win = 'no' } state = 'answered'">New Testament</button>
@@ -59,9 +59,9 @@ setInterval(function(){
             ${win == "yes" ? `<h2>${congrats[Math.round(Math.random()*(congrats.length - 1))]}</h2>` : `<h2>${wrong[Math.round(Math.random()*(wrong.length - 1))]}</h2>`}
             <button onclick="state = 'answering'">Next</button> <button onclick="state = 'finished'">Finish</button>
             `
-            pointsElem.innerHTML = `${points} points`
+            pointsElem.innerHTML = `${points} point${points == 1 ? "" : "s"}`
         } else {
-            document.body.innerHTML = `<h1>You got <code>${points}</code> points!</h1>`
+            document.body.innerHTML = `<h1>You got <code>${points}</code> point${points == 1 ? "" : "s"}!</h1>`
         }
     }
     
