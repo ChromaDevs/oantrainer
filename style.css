@@ -12,8 +12,10 @@ body {
 #buttons {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    height: 70%;
 }
 button {
     color: slategrey;
     font-size: xx-large;
+    height: 1fr
 }
