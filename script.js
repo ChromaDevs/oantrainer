@@ -14,6 +14,28 @@ let check = function(book){
     }
 }
 
+// Add this at the start of your script
+window.addEventListener('load', function() {
+    // Timeout needed for iOS
+    setTimeout(function() {
+        window.scrollTo(0, 1);
+    }, 0);
+});
+
+// Handle resize events
+window.addEventListener('resize', function() {
+    setTimeout(function() {
+        window.scrollTo(0, 1);
+    }, 0);
+});
+
+// Force hide on first interaction
+document.body.addEventListener('touchstart', function() {
+    setTimeout(function() {
+        window.scrollTo(0, 1);
+    }, 0);
+}, {once: true});
+
 let points = 0
 let lastState = null
 let state = "answering"
